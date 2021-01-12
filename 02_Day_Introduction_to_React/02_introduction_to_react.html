@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX and React</title>
+</head>
+<style>
+    h1.title{
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
+
+<body>
+    <div class="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+        integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA=="
+        crossorigin="anonymous"></script>
+    <script type="text/babel">
+    const rootElement = document.querySelector(".root");
+
+    const testObject ={
+        name: "Francesco",
+        surname: "Luppi"
+    }
+
+    const listElem = ['HTML', 'CSS', 'JS']
+    const favTech = listElem.map((tech) =><li>{tech}</li>)
+
+    const ciao = "Ciao"
+        const header=(
+        <header>
+          <h1 className="title">Welcome to 30 Days Of React</h1>
+          <h2 style={{color: 'green'}}>Getting Started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Asabeneh Yetayeh</p>
+          <small>Oct 2, 2020</small>
+          <div class="message">{ciao}</div>
+          <div class="from">Message from: {testObject.name + ' ' + testObject.surname}</div>
+          <ul>My fav tech:
+            {favTech}
+            </ul>
+        </header>
+    )
+    const footer=(
+        <footer>
+            <h3>HI I'M THE FOOTER</h3>
+        </footer>
+    )
+
+    const app = (
+        <div>
+            {header}
+            {footer}
+        </div>
+    )
+
+    ReactDOM.render(app, rootElement)
+
+    </script>
+</body>
+
+</html>
