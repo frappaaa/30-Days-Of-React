@@ -2,6 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import asabenehImage from './images/asabeneh.jpg'
+import form from './form.js'
 
 const hexaColor = () => {
   let str = '0123456789abcdef'
@@ -42,6 +43,7 @@ const Header = () => (
       <h3>JavaScript Library</h3>
       <p>Asabeneh Yetayeh</p>
       <small>Oct 3, 2020</small>
+      <form/>
     </div>
   </header>
 )
