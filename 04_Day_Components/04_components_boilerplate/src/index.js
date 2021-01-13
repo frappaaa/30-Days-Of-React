@@ -2,7 +2,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import asabenehImage from './images/asabeneh.jpg'
-import form from './form.js'
 
 const hexaColor = () => {
   let str = '0123456789abcdef'
@@ -34,6 +33,25 @@ const HexaColor = () => {
   )
 }
 
+
+
+const FirstName = () => <input type="text" placeholder="First Name"></input>
+const SecondName = () => <input type="text" placeholder="Second Name"></input>
+const Email = () => <input type="text" placeholder="Email"></input>
+const Submit = () => <input type="button" value="Submit"></input>
+
+const Form = () => (
+  <form>
+       <h1>Subscribe</h1>
+       <h5>Sign up with your email address to receive updates and news</h5>
+       <FirstName/>
+       <SecondName/>
+       <Email/>
+       <Submit/>
+  </form>
+)
+
+
 // Header Component
 const Header = () => (
   <header>
@@ -43,7 +61,7 @@ const Header = () => (
       <h3>JavaScript Library</h3>
       <p>Asabeneh Yetayeh</p>
       <small>Oct 3, 2020</small>
-      <form/>
+      <Form/>
     </div>
   </header>
 )
